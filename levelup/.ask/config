@@ -1,14 +1,14 @@
 {
   "deploy_settings": {
     "default": {
-      "skill_id": "",
+      "skill_id": "amzn1.ask.skill.a5845688-39e5-4e67-ac48-c277570e0f33",
       "was_cloned": false,
       "merge": {
         "skillManifest": {
           "apis": {
             "custom": {
               "endpoint": {
-                "uri": "ask-custom-levelup-default"
+                "uri": "arn:aws:lambda:us-east-1:653599009844:function:ask-custom-levelup-default"
               }
             }
           }

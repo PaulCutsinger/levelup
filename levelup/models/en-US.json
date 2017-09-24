@@ -1,47 +1,100 @@
 {
-    "interactionModel":{
-        "languageModel":{
-            "invocationName":"hello world",
-            "types":[],
-            "intents":[
-                {
-                  "name": "AMAZON.CancelIntent",
-                  "samples": []
-                },
-                {
-                  "name": "AMAZON.HelpIntent",
-                  "samples": []
-                },
-                {
-                  "name": "AMAZON.StopIntent",
-                  "samples": []
-                },
-                {
-                    "name":"HelloWorldIntent",
-                    "slots":[
-
-                    ],
-                    "samples":[
-                        "hello",
-                        "say hello",
-                        "say hello world"
-                    ]
-                },
-                {
-                    "name":"MyNameIsIntent",
-                    "slots":[
-                        {
-                            "name":"name",
-                            "type":"AMAZON.US_FIRST_NAME"
-                        }
-                    ],
-                    "samples":[
-                        "my name is {name}",
-                        "i am {name}",
-                        "you can call me {name}"
-                    ]
-                }
-            ]
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "level up",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "playLevel",
+          "slots": [
+            {
+              "name": "result",
+              "type": "resultType",
+              "samples": []
+            },
+            {
+              "name": "adjective",
+              "type": "adjectiveType",
+              "samples": []
+            }
+          ],
+          "samples": [
+            "it was a {adjective} {result}",
+            "i {result}"
+          ]
         }
+      ],
+      "types": [
+        {
+          "values": [
+            {
+              "name": {
+                "value": "glorious",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "amazing",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "crushing",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "wonderous",
+                "synonyms": []
+              }
+            },
+            {
+              "name": {
+                "value": "lack luster",
+                "synonyms": []
+              }
+            }
+          ],
+          "name": "adjectiveType"
+        },
+        {
+          "values": [
+            {
+              "name": {
+                "value": "win",
+                "synonyms": [
+                  "won",
+                  "victory"
+                ]
+              }
+            },
+            {
+              "name": {
+                "value": "lose",
+                "synonyms": [
+                  "loss",
+                  "defeat"
+                ]
+              }
+            }
+          ],
+          "name": "resultType"
+        }
+      ]
     }
+  }
 }
